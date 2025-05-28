@@ -26,6 +26,11 @@ A handy set of **Next.js code snippets** for Visual Studio Code to boost your de
 | `nsc`      | Server component               |
 | `nccwp`    | Client component with props    |
 | `nscwp`    | Server component with props    |
+| `cl`       | console.log                    |
+| `us`       | useState                       |
+| `ue`       | useEffect                      |
+| `dwi`      | Dynamic with Import            |
+| `di`       | Dynamic without Import         |
 
 
 *(More snippets coming soon!)*
@@ -35,7 +40,7 @@ A handy set of **Next.js code snippets** for Visual Studio Code to boost your de
 ## 🚀 Usage
 
 1. Install this extension from the VS Code Marketplace.
-2. Open a `.js`, `.ts`, or `.tsx` file.
+2. Open a `.js`, `.ts`, `.jsx` or `.tsx` file.
 3. Type the snippet prefix (e.g., `ncc`) and hit `Tab` or `Enter`.
 
 ---
@@ -50,9 +55,9 @@ A handy set of **Next.js code snippets** for Visual Studio Code to boost your de
 
 ## 📥 Installation
 
-Coming soon on the [VS Code Marketplace](https://marketplace.visualstudio.com)!
+[VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=NextGenHaris.next-js-snippets-extention)
 
-Until then, you can install locally using:
+You can install locally using:
 
 ```bash
 code --install-extension next-js-snippets.vsix

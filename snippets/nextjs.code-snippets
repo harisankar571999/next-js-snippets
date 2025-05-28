@@ -13,7 +13,208 @@
 	// 	"description": "Log output to console"
 	// }
 
-
-
+	 "Next.js Client Component": {
+  "prefix": "ncc",
+  "body": [
+    "'use client';",
+    "",
+    "import React from 'react';",
+    "",
+    "export default function ${TM_FILENAME_BASE}() {",
+    "  return (",
+    "    <div>",
+    "      $0",
+    "    </div>",
+    "  );",
+    "}"
+  ],
+  "description": "Next.js client component without props in TypeScript"
 }
+,
+  "Next.js Server Component": {
+  "prefix": "nsc",
+  "body": [
+    "import React from 'react';",
+    "",
+    "export default function ${TM_FILENAME_BASE}() {",
+    "  return (",
+    "    <div>",
+    "      $0",
+    "    </div>",
+    "  );",
+    "}"
+  ],
+  "description": "Next.js Server component without props in TypeScript"
+},
+"Next.js Client Component with props": {
+  "prefix": "nccwp",
+  "body": [
+    "'use client';",
+    "",
+    "import React from 'react';",
+    "",
+    "interface Props {",
+    "  ",
+    "}",
+    "",
+    "export default function ${TM_FILENAME_BASE}({}: Props) {",
+    "  return (",
+    "    <div>",
+    "      $0",
+    "    </div>",
+    "  );",
+    "}"
+  ],
+  "description": "Next.js client component with props in TypeScript"
+},
+"Next.js Server Component with props": {
+  "prefix": "nscwp",
+  "body": [
+    "import React from 'react';",
+    "",
+    "interface Props {",
+    "  ",
+    "}",
+    "",
+    "export default function ${TM_FILENAME_BASE}({}: Props) {",
+    "  return (",
+    "    <div>",
+    "      $0",
+    "    </div>",
+    "  );",
+    "}"
+  ],
+  "description": "Next.js client component with props in TypeScript"
+},
+"Next.js Root Layout": {
+  "prefix": "nlayout",
+  "body": [
+    "import '@/styles/globals.css';",
+    "import { Metadata } from 'next';",
+    "",
+    "export const metadata: Metadata = {",
+    "  title: '',",
+    "  description: '',",
+    "  openGraph: {",
+    "      url: '',",
+    "      title:''," ,
+    "      description: '',",
+    "      siteName: '',",
+    "      type: 'website',",  
+    "      images: [",
+    "        {",
+      "        url: '',",
+      "        width: 1200,",
+      "        height: 600,",
+      "        alt: '',",
+    "         }",
+    "       ]",
+    "     }",
+    "};",
+    "",
+    "export default function RootLayout({ children }:Readonly<{ children: React.ReactNode }>) {",
+    "  return (",
+    "    <html lang='en'>",
+    "      <body className=`antialiased`>{children}</body>",
+    "    </html>",
+    "  );",
+    "}"
+  ],
+  "description": "Root layout with metadata"
+}, 
+"Next.js generateMetadata ": {
+  "prefix": "ngmeta",
+  "body": [
+    "import { Metadata } from 'next';",
+    "",
+    "export async function generateMetadata(): Promise<Metadata> {",
+					"  // Define the dynamic metadata object",
+					"  // This object will be used to generate the metadata for the page",
+					"  // You can customize the values as per your requirements",
+					"",
+		"   return  {",
+		"      title: '',",
+		"      description: '',",
+		"      openGraph: {",
+    "         url: '',",
+    "         title:''," ,
+    "         description: '',",
+    "         siteName: '',",
+    "         type: 'website',",  
+    "         images: [",
+    "             {",
+    "               url: '',",
+    "               width: 1200,",
+    "               height: 600,",
+    "               alt: '',",
+    "              }",
+    "           ]",
+    "        }",
+		"      }; ",
+	  "  }",
+  ], 
+  "description": "Next.js generateMetadata function"
+},
+"Next.js API Route": {
+  "prefix": "napi",
+  "body": [
+    "import { NextResponse } from 'next/server';",
+    "",
+    "export async function GET(request: Request) {",
+    "  return NextResponse.json({});",
+    "}",
+    "",
+    "export async function POST(request: Request) {",
+    "  const body = await request.json();",
+    "  return NextResponse.json({ received: body });",
+    "}"
+  ],
+  "description": "API route with GET and POST handlers"
+},
+"console.log": {
+  "prefix": "cl",
+  "body": [
+	" console.log('')",
+  ],
+  "description": "console.log"
+},
+"useState": {
+  "prefix": "us",
+  "body": [
+
+	"const []=useState()",
+  ],
+  "description": "useState"
+},
+"useEffect": {
+  "prefix": "ue",
+  "body": [
+	
+	"useEffect(()=>{},[])",
+  ],
+  "description": "useEffect"
+},
+"Dynamic with Import": {
+  "prefix": "dwi",
+  "body": [
+	"'use client' // In Next.js 15, setting `ssr: false` should be in a client component",
+	"",
+	"",
+	"import dynamic from 'next/dynamic';",
+	"",
+	"",
+	"export const ${TM_FILENAME_BASE}=dynamic(()=>import(''),{ssr:false})  // edit variable name as per the component ",
+  ],
+  "description": "Dynamic without Import"
+},
+"Dynamic without Import": {
+  "prefix": "di",
+  "body": [
+	"",
+	"export const ${TM_FILENAME_BASE}=dynamic(()=>import(''),{ssr:false})  // edit variable name as per the component ",
+  ],
+  "description": "Dynamic without Import"
+},
+}
+
 

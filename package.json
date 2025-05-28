@@ -1,9 +1,9 @@
 
 {
-  "name": "next-js-snippets",
-  "displayName": "Next.js Snippets",
+  "name": "next-js-snippets-extention",
+  "displayName": "Next.js Quick Snippets ",
   "description": "A collection of useful Next.js snippets for VS Code.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "NextGenHaris",
   "engines": {
     "vscode": "^1.75.0"
@@ -30,9 +30,8 @@
   },
   "repository": {
   "type": "git",
-  "url": "https://github.com/harisanka571999/next-js-snippets"
+  "url": "https://github.com/harisankar571999/next-js-snippets"
 },
-
   "license":"MIT",
   "scripts": {
     "vscode:prepublish": "pnpm run compile",
